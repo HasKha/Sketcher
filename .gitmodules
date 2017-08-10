@@ -1,0 +1,3 @@
+[submodule "Dependencies/Eigen"]
+	path = Dependencies/Eigen
+	url = https://github.com/RLovelett/eigen.git
