@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{2819f53f-cf02-4165-bda8-7d01869385ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{e8706ab8-a2c5-486d-9dbe-8b1d2caca8c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Imgui">
+      <UniqueIdentifier>{e10125d6-288d-44d4-b1c7-1991ee0d6da6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="gl3w">
+      <UniqueIdentifier>{698204e3-c4b7-49f1-b6ae-cf392c090af8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyMesh.cc">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="GLShader.cpp">
+      <Filter>Shaders</Filter>
+    </ClCompile>
+    <ClCompile Include="Converters.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Utils.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui_demo.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\imgui_draw.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\imgui\examples\opengl3_example\imgui_impl_glfw_gl3.cpp">
+      <Filter>Imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Dependencies\gl3w\GL\gl3w.c">
+      <Filter>gl3w</Filter>
+    </ClCompile>
+    <ClCompile Include="Application.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="FileDialog.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Arcball.h">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Worker.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="Log.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyMesh.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="GLShader.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="MyShader.h">
+      <Filter>Shaders</Filter>
+    </ClInclude>
+    <ClInclude Include="Color.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Converters.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Utils.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imconfig.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imgui.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\imgui_internal.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\stb_rect_pack.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\stb_textedit.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\stb_truetype.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\imgui\examples\opengl3_example\imgui_impl_glfw_gl3.h">
+      <Filter>Imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\gl3w\GL\gl3w.h">
+      <Filter>gl3w</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Dependencies\gl3w\GL\glcorearb.h">
+      <Filter>gl3w</Filter>
+    </ClInclude>
+    <ClInclude Include="Application.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="FileDialog.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Worker.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Log.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonDefs.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\shaders\const_color.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\const_color.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\in_color.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\in_color.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\line.geom">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\normal.geom">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\phong.frag">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\phong.vert">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\triangle.geom">
+      <Filter>Shaders</Filter>
+    </None>
+    <None Include="..\shaders\mesh_in_color.vert">
+      <Filter>Shaders</Filter>
+    </None>
+  </ItemGroup>
+</Project>

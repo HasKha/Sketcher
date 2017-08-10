@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sketcher", "Sketcher\Sketcher.vcxproj", "{DE2EB271-0C75-483A-A2DF-78CD50062234}"
+	ProjectSection(ProjectDependencies) = postProject
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED} = {44EF6428-6A3D-376C-B882-CAAA9DA329ED}
+		{68E46D49-FF4B-337F-9909-E8CC0C457A5D} = {68E46D49-FF4B-337F-9909-E8CC0C457A5D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenMeshCore", "Dependencies\OpenMesh\Core\OpenMeshCore.vcxproj", "{68E46D49-FF4B-337F-9909-E8CC0C457A5D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "glfw", "Dependencies\glfw\glfw.vcxproj", "{44EF6428-6A3D-376C-B882-CAAA9DA329ED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE2EB271-0C75-483A-A2DF-78CD50062234}.Debug|x64.ActiveCfg = Debug|x64
+		{DE2EB271-0C75-483A-A2DF-78CD50062234}.Debug|x64.Build.0 = Debug|x64
+		{DE2EB271-0C75-483A-A2DF-78CD50062234}.Debug|x86.ActiveCfg = Debug|x64
+		{DE2EB271-0C75-483A-A2DF-78CD50062234}.Release|x64.ActiveCfg = Release|x64
+		{DE2EB271-0C75-483A-A2DF-78CD50062234}.Release|x64.Build.0 = Release|x64
+		{DE2EB271-0C75-483A-A2DF-78CD50062234}.Release|x86.ActiveCfg = Release|x64
+		{68E46D49-FF4B-337F-9909-E8CC0C457A5D}.Debug|x64.ActiveCfg = Debug|x64
+		{68E46D49-FF4B-337F-9909-E8CC0C457A5D}.Debug|x64.Build.0 = Debug|x64
+		{68E46D49-FF4B-337F-9909-E8CC0C457A5D}.Debug|x86.ActiveCfg = Debug|x64
+		{68E46D49-FF4B-337F-9909-E8CC0C457A5D}.Release|x64.ActiveCfg = Release|x64
+		{68E46D49-FF4B-337F-9909-E8CC0C457A5D}.Release|x64.Build.0 = Release|x64
+		{68E46D49-FF4B-337F-9909-E8CC0C457A5D}.Release|x86.ActiveCfg = Release|x64
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED}.Debug|x64.ActiveCfg = Debug|x64
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED}.Debug|x64.Build.0 = Debug|x64
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED}.Debug|x86.ActiveCfg = Debug|Win32
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED}.Debug|x86.Build.0 = Debug|Win32
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED}.Release|x64.ActiveCfg = Release|x64
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED}.Release|x64.Build.0 = Release|x64
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED}.Release|x86.ActiveCfg = Release|Win32
+		{44EF6428-6A3D-376C-B882-CAAA9DA329ED}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
