@@ -1,6 +1,11 @@
 # Sketcher 
 A starting point for geometry processing, mesh editing and visualization applications and tests.
 
+# Download
+clone the repository recursively: `git clone --recursive https://github.com/HasKha/Sketcher.git`
+
+Do not download as zip, as the submodules won't be included and the project will not build.
+
 # Features
 * Open and view OBJ or PLY meshes
 * Quickly and easily prototype new code
@@ -12,7 +17,7 @@ The following features are implemented for fast prototyping:
 * On-screen console (use `print` as if it was `printf`)
 
 # Dependencies
-All dependencies are included.
+All dependencies are included. Some are git submodules, so **make sure to clone the repository recursively**.
 * __OpenMesh (Core only)__: Mesh I/O, mesh datastructure, and basic mesh operations such as iterators and circulators.
 * __ImGui__: Easy and quick development of user interfaces.
 * __Eigen__: Used for matrix datastructures, can be used for more powerful matrix-related operations.
@@ -21,8 +26,10 @@ All dependencies are included.
 * __stb__: Saving screenshots and has useful bits if needed.
 
 # Operating System and compatibility
+### Windows
 A Visual Studio project is provided and it should work out of the box.
 
+### Unix
 All the software is compatible with Unix with the exception of:
 - `FileDialog.h/cpp`: you will have to replace this, or just remove and hardcode filenames
 - `main.cpp`: `WinMain`->`main` 
