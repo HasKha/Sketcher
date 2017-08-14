@@ -18,18 +18,18 @@ The following features are implemented for fast prototyping:
 
 # Dependencies
 All dependencies are included. Some are git submodules, so **make sure to clone the repository recursively**.
-* __OpenMesh (Core only)__: Mesh I/O, mesh datastructure, and basic mesh operations such as iterators and circulators.
-* __ImGui__: Easy and quick development of user interfaces.
-* __Eigen__: Used for matrix datastructures, can be used for more powerful matrix-related operations.
-* __glfw / gl3w__: Window management and OpenGL bindings.
-* __glm__: Handle camera matrices and communication with glsl.
-* __stb__: Saving screenshots and has useful bits if needed.
+* __[OpenMesh](https://www.openmesh.org/) (Core only)__: Mesh I/O, mesh datastructure, and basic mesh operations such as iterators and circulators.
+* __[ImGui](https://github.com/ocornut/imgui)__: Easy and quick development of user interfaces.
+* __[Eigen](http://eigen.tuxfamily.org/)__: Used for matrix datastructures, can be used for more powerful matrix-related operations.
+* __[glfw](http://www.glfw.org/) / [gl3w](https://github.com/skaslev/gl3w)__: Window management and OpenGL bindings.
+* __[glm](https://github.com/g-truc/glm)__: Handle camera matrices and communication with glsl.
+* __[stb](https://github.com/nothings/stb)__: Saving screenshots and has useful bits if needed.
 
 # Operating System and compatibility
-### Windows
+## Windows
 A Visual Studio project is provided and it should work out of the box.
 
-### Unix
+## Unix
 All the software is compatible with Unix with the exception of:
 - `FileDialog.h/cpp`: you will have to replace this, or just remove and hardcode filenames
 - `main.cpp`: `WinMain`->`main` 
