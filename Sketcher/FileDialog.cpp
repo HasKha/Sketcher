@@ -10,6 +10,8 @@
 */
 
 #include "FileDialog.h"
+#include <include/nfd.h>
+
 
 #include <algorithm>
 
@@ -19,6 +21,22 @@
 
 
 std::string file_dialog(const std::vector<std::pair<std::string, std::string>> &filetypes, bool save) {
+    nfdchar_t *outpath = NULL;
+    nfdresult_t result = NFD_OpenDialog(NULL, NULL, &outpath);
+
+    if (result == NFD_OKAY) {
+        std::string out = std::string(outpath);
+        free(outpath);
+        return out;
+    } else if (result == NFD_CANCEL) {
+        // user pressed cancel
+    } else {
+        printf("Error loading file\n");
+    }
+
+    return std::string("");
+}
+/*
 #define FILE_DIALOG_MAX_BUFFER 1024
 #if defined(_WIN32)
     OPENFILENAME ofn;
@@ -95,7 +113,7 @@ std::string file_dialog(const std::vector<std::pair<std::string, std::string>> &
     return result;
 #endif
 }
-
+*/
 
 void StringSplit(const std::string &s, std::vector<std::string> &strs, char ch) {
 	size_t pos = s.find(ch);

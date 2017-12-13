@@ -17,14 +17,16 @@ INCLUDE_DIR = \
 		-I$(PROJECT_ROOT)/Dependencies/glm \
 		-I$(PROJECT_ROOT)/Dependencies/gco-v3.0 \
 		-I$(PROJECT_ROOT)/Dependencies/stb \
-		-I$(PROJECT_ROOT)/Dependencies/gl3w
+		-I$(PROJECT_ROOT)/Dependencies/gl3w \
+		-I$(PROJECT_ROOT)/Dependencies/nativefiledialog/src
 
 LIB_DIR = -L/usr/local/lib \
 		-L/opt/local/lib \
+		-L$(PROJECT_ROOT)/Dependencies/nativefiledialog/build/lib/Debug/x64/ -lnfd_d \
 		-lglfw -lGLEW -lOpenMeshCore
 
 
-LDFLAGS= -framework GLUT -framework OpenGL -framework Cocoa
+LDFLAGS= -framework GLUT -framework OpenGL -framework Cocoa -framework AppKit
 
 BIN := Sketcher
 SRC := 	$(wildcard *.cpp) \

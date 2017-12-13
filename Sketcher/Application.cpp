@@ -192,12 +192,12 @@ void Application::PostRender() {
 }
 
 void Application::LoadMeshDialog() {
-	Worker::Do([&]() {
+	// Worker::Do([&]() {
 		std::string filename = file_dialog({ { "obj", "Wavefront OBJ" },{ "off", "" } }, false);
 		if (!filename.empty()) {
 			LoadMesh(filename);
 		}
-	});
+	// });
 }
 
 void Application::LoadMesh(const std::string filename) {
