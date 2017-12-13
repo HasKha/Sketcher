@@ -4,7 +4,7 @@
 #include <assert.h>
 
 #include <imgui.h>
-#include <GLFW\glfw3.h>
+#include <GLFW/glfw3.h>
 
 #include "Log.h"
 #include "FileDialog.h"

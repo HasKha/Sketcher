@@ -17,7 +17,7 @@
 #include <windows.h>
 #endif
 
-#if !defined(__APPLE__)
+
 std::string file_dialog(const std::vector<std::pair<std::string, std::string>> &filetypes, bool save) {
 #define FILE_DIALOG_MAX_BUFFER 1024
 #if defined(_WIN32)
@@ -75,7 +75,9 @@ std::string file_dialog(const std::vector<std::pair<std::string, std::string>> &
     return std::string(ofn.lpstrFile);
 #else
     char buffer[FILE_DIALOG_MAX_BUFFER];
-    std::string cmd = "/usr/bin/zenity --file-selection ";
+    // on osx, `sudo port install zenity`
+    // on unix, change /opt/local/bin to your path, might be /usr/bin
+    std::string cmd = "/opt/local/bin/zenity --file-selection ";
     if (save)
         cmd += "--save ";
     cmd += "--file-filter=\"";
@@ -93,7 +95,7 @@ std::string file_dialog(const std::vector<std::pair<std::string, std::string>> &
     return result;
 #endif
 }
-#endif
+
 
 void StringSplit(const std::string &s, std::vector<std::string> &strs, char ch) {
 	size_t pos = s.find(ch);

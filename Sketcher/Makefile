@@ -1,30 +1,53 @@
-CC= g++
+# Available make targets: `make`, `make clean`, `make run`
+#
+# Dependencies to install: glfw, GLEW, OpenMeshCore
+#
+# For GLEW you need to download the source, make && sudo make install
+# To install GLFW you probably need cmake and then make && make install
 
+CC= g++
 CFLAGS= -std=c++11 -Wall
 
-INC_DIR= -I/usr/local/include/eigen3 $(shell sdl2-config --cflags)
+PROJECT_ROOT = /Users/gori/git/Sketcher
 
-L_DIR= -L/usr/local/lib $(shell sdl2-config --libs)
+INCLUDE_DIR = \
+		-I/usr/local/include \
+		-I$(PROJECT_ROOT)/Dependencies/Eigen \
+		-I$(PROJECT_ROOT)/Dependencies/imgui \
+		-I$(PROJECT_ROOT)/Dependencies/glm \
+		-I$(PROJECT_ROOT)/Dependencies/gco-v3.0 \
+		-I$(PROJECT_ROOT)/Dependencies/stb \
+		-I$(PROJECT_ROOT)/Dependencies/gl3w
 
-LDFLAGS= -framework GLUT -framework OpenGL -framework Cocoa -lOpenMeshCore
+LIB_DIR = -L/usr/local/lib \
+		-L/opt/local/lib \
+		-lglfw -lGLEW -lOpenMeshCore
+
+
+LDFLAGS= -framework GLUT -framework OpenGL -framework Cocoa
 
 BIN := Sketcher
-SRC := $(wildcard *.cpp)
+SRC := 	$(wildcard *.cpp) \
+ 		$(wildcard ../Dependencies/imgui/*.cpp) \
+ 		../Dependencies/imgui/examples/opengl3_example/imgui_impl_glfw_gl3.cpp \
+ 		../Dependencies/gl3w/GL/gl3w.cpp
+ 		
+
 OBJ := $(SRC:%.cpp=build/%.o)
 
 default: build
 
 build: $(BIN)
 	
-$(BIN): build/main.o $(OBJ)
-	$(CC) $(LDFLAGS) $(L_DIR) -o $@ $^
+$(BIN): build/main.o $(OBJ) 
+	$(CC) $(LDFLAGS) $(LIB_DIR) -o $@ $^
 	
 build/%.o: %.cpp
 	@ mkdir -p $(@D)
-	$(CC) $(CFLAGS) $(INC_DIR) -c $< -o $@
-	
+	$(CC) $(CFLAGS) $(INCLUDE_DIR) -c $< -o $@
+
 clean:
-	rm -rf *~ $(OBJ) $(BIN) build
+	rm -rf *~ $(OBJ) $(BIN) build Dependencies
 	
 run: build execute
 

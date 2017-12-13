@@ -1,5 +1,5 @@
 #include "Application.h"
-#include <Eigen\Core>
+#include <Eigen/Core>
 
 #include <iostream>
 #include <fstream>
@@ -15,13 +15,13 @@
 #include <stb_image_write.h>
 
 Application::Application() :
+	save_screenshot(false),
 	show_interface(true),
 	show_controls(true),
 	show_visualization(true),
 	show_console(true),
-	show_test_window(false),
-	show_camera(false),
-	save_screenshot(false) {
+	show_test_window(false), 
+	show_camera(false) {
 
 	// uncomment to specify mesh to load at startup
 	//Worker::Do([&]() {

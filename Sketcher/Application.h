@@ -7,9 +7,9 @@
 #include <sstream>
 #include <iomanip>
 
-#include <Eigen\Core>
-#include <GL\gl3w.h>
-#include <GLFW\glfw3.h>
+#include <Eigen/Core>
+#include <GL/gl3w.h>
+#include <GLFW/glfw3.h>
 
 #include "CommonDefs.h"
 #include "Renderer.h"

@@ -3,10 +3,10 @@
 #include <string>
 #include <map>
 
-#include <GL\gl3w.h>
+#include <GL/gl3w.h>
 
-#include <glm\glm.hpp>
-#include <glm\gtc\type_ptr.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 #include "CommonDefs.h"
 
@@ -29,9 +29,9 @@ private:
 public:
 	/// Create an unitialized OpenGL shader
 	GLShader()
-		: mVertexShader(0), mFragmentShader(0), mGeometryShader(0),
-		mProgramShader(0), mVertexArrayObject(0), mPrimitiveCount(0),
-		initialized(false) {}
+		: initialized(false), 
+		mPrimitiveCount(0), mVertexShader(0), mFragmentShader(0), 
+		mGeometryShader(0), mProgramShader(0), mVertexArrayObject(0) {}
 
 	/// Initialize the shader using the specified source strings
 	bool Init(const std::string &vertex_str,
@@ -210,7 +210,7 @@ inline void GLShader::DownloadAttrib(const std::string & name, Matrix & M) {
 
 	auto it = mBufferObjects.find(name);
 	if (it == mBufferObjects.end())
-		throw std::runtime_error("downloadAttrib(" + mName + ", " + name + ") : buffer not found!");
+		throw std::runtime_error("downloadAttrib(" + M + ", " + name + ") : buffer not found!");
 
 	const Buffer &buf = it->second;
 	M.resize(buf.dim, buf.size / buf.dim);

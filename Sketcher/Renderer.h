@@ -4,13 +4,13 @@
 #include <functional>
 #include <vector>
 
-#include <glm\glm.hpp>
-#include <glm\gtc\matrix_transform.hpp>
-#include <glm\gtc\matrix_inverse.hpp>
-#include <glm\gtc\type_ptr.hpp>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/matrix_inverse.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
-#include <GL\gl3w.h>
-#include <GLFW\glfw3.h>
+#include <GL/gl3w.h>
+#include <GLFW/glfw3.h>
 #include <imgui.h>
 
 #include "Arcball.h"
@@ -44,8 +44,8 @@ public:
 
 	template<typename Matrix>
 	void UploadShaderAttrib(enum Render mode, std::string name, Matrix& M) {
-		shader[mode].shader.Bind();
-		shader[mode].shader.UploadAttrib(name, M);
+		shader[mode]->Bind();
+		shader[mode]->UploadAttrib(name, M);
 	}
 
 	void Render();
